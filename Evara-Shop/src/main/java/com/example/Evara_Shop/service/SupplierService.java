@@ -1,5 +1,6 @@
 package com.example.Evara_Shop.service;
 
+import com.example.Evara_Shop.DTO.supplier.SupplierByIdDTO;
 import com.example.Evara_Shop.DTO.supplier.SupplierDTO;
 import com.example.Evara_Shop.DTO.supplier.SupplierCreateDTO;
 import com.example.Evara_Shop.builder.SupplierBuilder;
@@ -23,6 +24,11 @@ public class SupplierService {
 
     public List<SupplierDTO> getAll() {
         return SimpleServiceHelper.mapToDTOList(supplierRepo.findAll(), SupplierDTO::new);
+    }
+
+    public SupplierByIdDTO getById(Long id) {
+        Supplier supplier = supplierRepo.findById(id).get();
+        return new SupplierByIdDTO(supplier);
     }
 
     public SupplierDTO create(SupplierCreateDTO dto) {

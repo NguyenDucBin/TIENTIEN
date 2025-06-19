@@ -1,4 +1,4 @@
-package com.example.Evara_Shop.service;
+package com.example.Evara_Shop.service.user;
 
 import com.example.Evara_Shop.model.User;
 import com.example.Evara_Shop.repository.UserRepo;

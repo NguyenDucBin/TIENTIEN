@@ -1,5 +1,6 @@
 package com.example.Evara_Shop.controller;
 
+import com.example.Evara_Shop.DTO.supplier.SupplierByIdDTO;
 import com.example.Evara_Shop.DTO.supplier.SupplierCreateDTO;
 import com.example.Evara_Shop.DTO.supplier.SupplierDTO;
 import com.example.Evara_Shop.service.SupplierService;
@@ -19,6 +20,11 @@ public class SupplierController {
     @GetMapping
     public ResponseEntity<List<SupplierDTO>> getAll() {
         return ResponseEntity.ok(supplierService.getAll());
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<SupplierByIdDTO> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(supplierService.getById(id));
     }
 
     @PostMapping
