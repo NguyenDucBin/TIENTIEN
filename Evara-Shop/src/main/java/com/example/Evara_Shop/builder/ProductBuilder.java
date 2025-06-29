@@ -11,7 +11,7 @@ public class ProductBuilder {
         p.setName(dto.getName());
         p.setPrice(dto.getPrice());
         p.setOldPrice(dto.getOldPrice());
-        p.setImage(dto.getImage());
+        p.setImage(dto.getImage()); 
         p.setImageHover(dto.getImageHover());
         p.setStock(dto.getStock());
         p.setSupplier(supplier);
